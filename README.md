@@ -12,7 +12,7 @@ How to Install
 --------------
 Require the package with composer.
 ```bash
-composer require "smalldogs/ip2country:dev-master"
+composer require "smalldogs/ip2country"
 ```
 
 Create and populate the database lookup table.
