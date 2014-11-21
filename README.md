@@ -20,6 +20,16 @@ Create and populate the database lookup table.
 php artisan migrate --package="smalldogs/ip2country"
 ```
 
+Lastly, add the service to your providers array in <code>app/config/app.php</code>
+```php
+'providers' => array(
+        'Smalldogs\Ip2Country\Ip2CountryServiceProvider',
+        //[...]
+		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
+		'Illuminate\Auth\AuthServiceProvider'
+);
+```
+
 How to Use
 ----------
 
