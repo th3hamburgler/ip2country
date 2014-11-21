@@ -4,7 +4,7 @@
     "license" : "BSD-2-Clause",
     "time" : "2014-11-20",
     "issues": "https://github.com/smalldogs/ip2country/issues",
-    "keywords": ["laravel","ip","ip address","ip lookup","geolookup","geocode","country","location","ipv4"]
+    "keywords": ["laravel","ip","ip address","ip lookup","geolookup","geocode","country","location","ipv4"],
     "authors": [
         {
             "name": "Dustin Brownell",
