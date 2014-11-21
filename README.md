@@ -1,4 +1,4 @@
-Laravel Country Lookup with IP Address
+Laravel Country Lookup by IP Address
 ======================================
 
 Laravel package to lookup the country associated with an IPv4 address. Creates and populates a local database table, 
