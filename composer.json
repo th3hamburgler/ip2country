@@ -3,6 +3,7 @@
     "description": "Laravel package to lookup the country associated with an IPv4 address",
     "license" : "BSD-2-Clause",
     "time" : "2014-11-20",
+    "version": "1.1.0",
     "issues": "https://github.com/smalldogs/ip2country/issues",
     "keywords": ["laravel","ip","ip address","ip lookup","geolookup","geocode","country","location","ipv4"],
     "authors": [
