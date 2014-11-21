@@ -16,10 +16,13 @@ class Ip2Country {
 
         $user_ip = ip2long($ipAddress);
 
-        $results = \DB::table('laravel_ip2country')
+        $query = \DB::table('laravel_ip2country')
             ->where('start_ip_long', '<=', $user_ip)
-            ->where('end_ip_long', '>=', $user_ip)
-            ->first();
+            ->where('end_ip_long', '>=', $user_ip);
+
+        if (\Config::get('ip2country::cache_results')) $query->remember(\Config::get('ip2country::cache_results'));
+
+        $results = $query->first();
 
         return count($results) ?  $results->{$response} : \Config::get('ip2country::default_' . $response);
 
