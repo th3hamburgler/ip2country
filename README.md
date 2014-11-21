@@ -2,6 +2,8 @@ Laravel Country Lookup by IP Address
 ======================================
 [![Downloads](http://img.shields.io/packagist/dt/smalldogs/ip2country.svg)](https://packagist.org/packages/smalldogs/ip2country)
 [![License](http://img.shields.io/:license-bsd2-blue.svg)](http://opensource.org/licenses/BSD-2-Clause)
+![Version](http://img.shields.io/github/tag/smalldogs/ip2country.svg)
+
 
 Laravel package to lookup the country associated with an IPv4 address developed with an eye to keeping it as lightweight and lookups as fast as possible. Creates and populates a **local database** table, 
 so there are **no external requests** being made during runtime.
