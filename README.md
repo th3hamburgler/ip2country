@@ -1,7 +1,7 @@
 Laravel Country Lookup by IP Address
 ======================================
 
-Laravel package to lookup the country associated with an IPv4 address. Creates and populates a **local database** table, 
+Laravel package to lookup the country associated with an IPv4 address developed with an eye to keeping it as lightweight and lookups as fast as possible. Creates and populates a **local database** table, 
 so there are **no external requests** being made during runtime.
 
 This product includes GeoLite data created by MaxMind, available from
