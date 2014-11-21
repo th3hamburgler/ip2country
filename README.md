@@ -30,8 +30,6 @@ Lastly, add the service to your providers array in <code>app/config/app.php</cod
 'providers' => array(
         'Smalldogs\Ip2Country\Ip2CountryServiceProvider',
         //[...]
-		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
-		'Illuminate\Auth\AuthServiceProvider'
 );
 ```
 
