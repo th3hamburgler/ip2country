@@ -13,6 +13,8 @@ class CreateLaravelIpCountryTable extends Migration {
 	public function up()
 	{
 		//
+        DB::disableQueryLog();
+
         Schema::dropIfExists('laravel_ip2country');
 
         Schema::create('laravel_ip2country', function($table)
