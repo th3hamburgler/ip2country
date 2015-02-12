@@ -13,6 +13,16 @@ This package includes GeoLite data created by MaxMind, available from
 <a href="http://www.maxmind.com">http://www.maxmind.com</a>. The updated free downloadable database is released the
 first Tuesday of each month. I'll attempt to ensure to update this package each time.
 
+Current IP Mapping Table
+------------------------
+Doesn't seem to change much from month to month. Current version was released by MaxMind `February 4, 2015`
+
+How to Update Mapping DB Table
+------------------------------
+```bash
+php artisan migrate --package="smalldogs/ip2country"
+```
+
 How to Install
 --------------
 Require the package with composer.
