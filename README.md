@@ -19,6 +19,19 @@ Doesn't seem to change much from month to month. Current version was released by
 
 How to Update Mapping DB Table
 ------------------------------
+If you have already installed and setup the ip2country package, but want to update the IP database mappings. First, get the latest ip2country package.
+
+```bash
+composer update 
+```
+
+or, to only update this pacakage
+```bash
+composer update smalldogs/ip2country
+````
+
+Then, update your database by running the new migration.
+
 ```bash
 php artisan migrate --package="smalldogs/ip2country"
 ```
