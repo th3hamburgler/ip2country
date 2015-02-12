@@ -25,17 +25,17 @@ php artisan migrate --package="smalldogs/ip2country"
 
 How to Install
 --------------
-Require the package with composer.
+1. Require the package with composer.
 ```bash
 composer require "smalldogs/ip2country"
 ```
 
-Create and populate the database lookup table.
+2. Create and populate the database lookup table.
 ```bash
 php artisan migrate --package="smalldogs/ip2country"
 ```
 
-Lastly, add the service to your providers array in <code>app/config/app.php</code>
+3. Add the service to your providers array in <code>app/config/app.php</code>
 ```php
 'providers' => array(
         'Smalldogs\Ip2Country\Ip2CountryServiceProvider',
