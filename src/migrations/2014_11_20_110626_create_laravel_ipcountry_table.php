@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLaravelIpCountryTable extends Migration {
+class CreateLaravelIpcountryTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,41 +12,9 @@ class CreateLaravelIpCountryTable extends Migration {
 	 */
 	public function up()
 	{
-		//
-        DB::disableQueryLog();
-
-        Schema::dropIfExists('laravel_ip2country');
-
-        Schema::create('laravel_ip2country', function($table)
-        {
-            $table->bigIncrements('id')->unsigned();
-            $table->string('start_ip');
-            $table->string('end_ip');
-            $table->integer('start_ip_long')->unsigned();
-            $table->integer('end_ip_long')->unsigned();
-            $table->string('country_code', 2);
-            $table->string('country_name', 64);
-        });
-
-        $csvData = file_get_contents(__DIR__ . '/../storage/201411-GeoIPCountryWhois.csv');
-        //$csvData = str_getcsv($csvData);
-        //
-        $dataArray = str_getcsv($csvData, "\n"); //parse the rows
-        echo "Loading IP Mappings [";
-        foreach($dataArray as $row)
-        {
-            $row = str_getcsv($row);
-            echo ".";
-            DB::table('laravel_ip2country')->insert([
-                    'start_ip' => $row[0],
-                    'end_ip' => $row[1],
-                    'start_ip_long' => $row[2],
-                    'end_ip_long' => $row[3],
-                    'country_code' => $row[4],
-                    'country_name' => $row[5],
-                ]);
-        }
-        echo "]\n";
+		// Since there is a new file, to keep people from loading multiple verisons, then dropping it
+	        // in favor of the new, killing up "up" migration, while preserving the down so anyone who updates
+	        // the package, but doesn't run the migration, can still roll back.
 	}
 
 	/**
